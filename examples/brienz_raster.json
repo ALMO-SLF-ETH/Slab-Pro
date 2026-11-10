@@ -1,0 +1,64 @@
+{
+  "project_dir": "../output",
+  "sim_name": "brienz_raster",
+
+  "physical_params": {
+    "gravity": 9.8045,
+    "rho": 2500.0
+  },
+
+  "time_params": {
+    "output_dt": 10.0,
+    "total_time": 60.0
+  },
+
+  "numerical_params": {
+    "C_cfl": 0.5,
+    "dt_max": 0.04,
+    "flip_ratio": 0.9,
+    "sampling_method": "POISSON"
+  },
+
+  "friction": {
+    "type": "MU_I",
+    "coulomb": { "mu": 0.5429556996384369 },
+    "voellmy": { "mu": 0.45572625553258467, "xi": 1000.0 },
+    "mu_I": { "mu_1": 0.45572625553258467, "mu_2": 0.7132930678970053, "I0": 0.25, "d": 0.1, "phi": 0.6 }
+  },
+
+  "terrain": {
+    "type": "DEM",
+    "analytical": {
+      "dx": 1.0,
+      "Lx": 10.0,
+      "Ly": 20.0
+    },
+    "dem": {
+      "filepath": "../examples/brienz_terrain_1m.asc"
+    }
+  },
+
+  "release": {
+    "type": "RASTER",
+    "h0": 22.59,
+    "rectangle": {
+      "center": [ 5.0, 5.0 ],
+      "Lx": 2.0,
+      "Ly": 2.0,
+      "rotation_deg": 0.0
+    },
+    "ellipse": {
+      "center": [ 5.0, 5.0 ],
+      "rx": 2.0,
+      "ry": 2.0,
+      "rotation_deg": 0.0
+    },
+    "polygon": {
+      "filepath": "../examples/brienz_release_polygon.shp"
+    },
+    "raster": {
+      "filepath": "../examples/brienz_release_raster_1m.asc",
+      "h_min": 2.0
+    }
+  }
+}
