@@ -1,0 +1,8 @@
+build/
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.asc
+*.tif
+.DS_Store

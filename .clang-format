@@ -1,0 +1,22 @@
+BasedOnStyle: LLVM
+
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ContinuationIndentWidth: 4
+
+ColumnLimit: 180
+
+PointerAlignment: Left
+
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortLambdasOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: Never
+
+BreakBeforeBinaryOperators: NonAssignment
+
+SortIncludes: false
+
+IndentCaseLabels: true
+
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
